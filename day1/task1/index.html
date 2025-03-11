@@ -12,7 +12,7 @@
 
 
         .card{
-            width: 200px;
+            width: 100px;
             height: 300px;
             background-color: #f32b2b;
             margin: 8px;
@@ -41,13 +41,13 @@
         }
 
         .active{
-            width: 400px;
+            width: 600px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card card1"></div>
+        <div class="card card1 active"></div>
         <div class="card card2"></div>
         <div class="card card3"></div>
         <div class="card card4"></div>
@@ -56,7 +56,8 @@
     
     <script>
         elements = document.querySelectorAll('.card');
-        elements.forEach(element => addEventListener('click', () => {
+        elements.forEach(element => element.addEventListener('click', () => {
+            elements.forEach(card => card.classList.remove('active'));
             element.classList.add('active');
             console.log(element);
         }));
