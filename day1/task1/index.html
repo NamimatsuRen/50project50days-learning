@@ -12,7 +12,7 @@
 
 
         .card{
-            width: 100px;
+            width: 200px;
             height: 300px;
             background-color: #f32b2b;
             margin: 8px;
@@ -21,7 +21,6 @@
         }
 
         .card1{
-            width: 400px;
             background-image: url("https://photock.jp/photo/middle_webp/photo0000-0035.webp");
         }
 
@@ -40,6 +39,10 @@
         .card5{
             background-image: url("https://photock.jp/photo/middle_webp/photo0000-0730.webp");
         }
+
+        .active{
+            width: 400px;
+        }
     </style>
 </head>
 <body>
@@ -50,5 +53,12 @@
         <div class="card card4"></div>
         <div class="card card5"></div>
     </div>
+    
+    <script>
+        element = document.querySelectorAll('.card')
+        element.addEventListener('click', function(){
+          elements.classList.add('active')  
+        })
+    </script>
 </body>
 </html>
