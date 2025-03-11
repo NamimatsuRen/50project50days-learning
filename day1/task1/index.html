@@ -8,18 +8,26 @@
         .container{
             display: flex;
             flex-direction: row;
+            margin: 32px 100px 32px;
         }
 
 
         .card{
-            width: 100px;
-            height: 300px;
+            width: 8%;
+            height: 800px;
             background-color: #f32b2b;
             margin: 8px;
             background-size: cover;
-            transition: width 0.5s;
-            border-radius: 8px;
-            box-shadow: 4px 4px 2px #504f4f;
+            transition: width 1s;
+            border-radius: 100px;
+            box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .card:hover{
@@ -47,17 +55,17 @@
         }
 
         .active{
-            width: 600px;
+            width: 90%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card card1 active"></div>
-        <div class="card card2"></div>
-        <div class="card card3"></div>
-        <div class="card card4"></div>
-        <div class="card card5"></div>
+        <div class="card card1 active">Explore the world</div>
+        <div class="card card2">Feel nature</div>
+        <div class="card card3">Walk around</div>
+        <div class="card card4">Let's go fishing</div>
+        <div class="card card5">Go on a adventure</div>
     </div>
     
     <script>
