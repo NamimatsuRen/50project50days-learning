@@ -55,10 +55,12 @@
     </div>
     
     <script>
-        element = document.querySelectorAll('.card')
-        element.addEventListener('click', function(){
-          elements.classList.add('active')  
-        })
+        elements = document.querySelectorAll('.card');
+        elements.forEach(element => addEventListener('click', () => {
+            element.classList.add('active');
+            console.log(element);
+        }));
+        
     </script>
 </body>
 </html>
