@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 80px;
+            
+        }
+
+        .card{
+            width: 10%;
+            height: 80vh;
+            background: #000;
+            margin: 8px;
+            background-size: cover;
+            border-radius: 100px;
+            transition: width 1.5s;
+        }
+
+        .card1{background-image: url(https://photock.jp/photo/middle_webp/photo0000-4234.webp);}
+        .card2{background-image: url(https://photock.jp/photo/middle_webp/photo0000-4821.webp);}
+        .card3{background-image: url(https://photock.jp/photo/middle_webp/photo0000-4526.webp);}
+        .card4{background-image: url(https://photock.jp/photo/middle_webp/photo0000-4232.webp);}
+        .card5{background-image: url(https://photock.jp/photo/middle_webp/photo0000-4229.webp);}
+
+        .card:hover{
+            opacity: 80%;
+        }
+
+        .active{
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card1 active"></div>
+        <div class="card card2"></div>
+        <div class="card card3"></div>
+        <div class="card card4"></div>
+        <div class="card card5"></div>
+    </div>
+
+    <script>
+        elements = document.querySelectorAll('.card');
+        elements.forEach(element => element.addEventListener('click', () =>{
+            elements.forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+        }))
+    </script>
+</body>
+</html>
